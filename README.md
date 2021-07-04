@@ -168,20 +168,11 @@ To specify the number of times a token should be matched by the regex engine you
 
 <br> - Email Example: `validemail@gmail.com`
 
+ ---
 
  ---
-### Boundaries:
-<br>
-
- ---
-### Back-references:
-<br>
-
- ---
-### Look-ahead and Look-behind:
-<br>
-
- ---
+ <br>
+ 
 ## Author:
 
 Robert Schwartz
