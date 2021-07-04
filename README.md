@@ -7,7 +7,7 @@ This Gist will describe the process of using a regular expression in order to ma
 
 The following regular expression can be used to verify that user input is a valid email address:
 
->`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`
+>`/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/g`
 
 The Contents below will break down this expression into it's parts.
 
@@ -31,7 +31,7 @@ The Contents below will break down this expression into it's parts.
 
 Anchors match a position within a string
 
-> Our Regex:  `^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$`
+> Our Regex:  `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/g`
 
 - Anchors Used: `^` , `$`
     >* `^` Indicates the Starting Position
@@ -52,7 +52,7 @@ Starts the check at the start of the email address and ends the check at the end
   Quantifiers indicate that the preceding token must be matched a certain number of times.
   By default, quantifiers are greedy, and will match as many characters as possible.
 
-> Our Regex:  `^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$`
+> Our Regex:  `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/g`
 
 - Quantifiers Used: `+`  `{2,6}`
     >* `+` Matches 1 or more of the preceding token.
@@ -73,7 +73,7 @@ Starts the check at the start of the email address and ends the check at the end
 
 Character Classes match a character from a specific set.  There are pre-defined classes or you can define unique sets.  Character classes can also be combined in a large set.
 
-> Our Regex:  `^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$`
+> Our Regex:  `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/g`
 
 - Character Classes Used: `[a-z]`, `[0-9]`, `/d`, `/.`, `@`
     >* `[a-z]` looks for any characters within the range of lowercase a-z.
@@ -89,7 +89,22 @@ All characters contained in the email example are allowed by the Character Class
  ---
 
 
-### Flags
+### Flags:
+
+
+Regular expressions have six optional flags that allow for functionality like global and case insensitive searching. These flags can be used separately or together in any order, and are included as part of the regular expression.
+
+> Our Regex:  `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/g`
+
+- Flags used: `g`
+    >* `g` is used as a Global search and will match all occurrences.<br>Without the `g` flag, it'll only test for the first.
+
+<br> - Email Example: `validemail@gmail.com`
+
+There was one global occurrence of this email address.
+
+ ---
+
 
 ### Grouping and Capturing
 
