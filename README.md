@@ -23,10 +23,14 @@ The Contents below will break down this expression into it's parts.
 - [Boundaries](#boundaries)
 - [Back-references](#back-references)
 - [Look-ahead and Look-behind](#look-ahead-and-look-behind)
+---
 
 ## Regex Components
 
+<br>
+
 ### Anchors:
+<br>
 
 
 Anchors match a position within a string
@@ -48,6 +52,7 @@ Starts the check at the start of the email address and ends the check at the end
 
 
 ### Quantifiers:
+<br>
 
   Quantifiers indicate that the preceding token must be matched a certain number of times.
   By default, quantifiers are greedy, and will match as many characters as possible.
@@ -69,6 +74,7 @@ Starts the check at the start of the email address and ends the check at the end
  ---
 
 ### Character Classes:
+<br>
 
 
 Character Classes match a character from a specific set.  There are pre-defined classes or you can define unique sets.  Character classes can also be combined in a large set.
@@ -90,6 +96,7 @@ All characters contained in the email example are allowed by the Character Class
 
 
 ### Flags:
+<br>
 
 
 Regular expressions have six optional flags that allow for functionality like global and case insensitive searching. These flags can be used separately or together in any order, and are included as part of the regular expression.
@@ -106,19 +113,47 @@ There was one global occurrence of this email address.
  ---
 
 
-### Grouping and Capturing
+### Grouping and Capturing:
+<br>
 
-### Bracket Expressions
 
-### Greedy and Lazy Match
+Regular expressions have six optional flags that allow for functionality like global and case insensitive searching. These flags can be used separately or together in any order, and are included as part of the regular expression.
 
-### Boundaries
+> Our Regex:  `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/g`
 
-### Back-references
+- Flags used: `g`
+    >* `g` is used as a Global search and will match all occurrences.<br>Without the `g` flag, it'll only test for the first.
 
-### Look-ahead and Look-behind
+<br> - Email Example: `validemail@gmail.com`
 
-## Author
+There was one global occurrence of this email address.
+
+ ---
+
+### Bracket Expressions:
+<br>
+
+ ---
+### Greedy and Lazy Match:
+<br>
+
+ ---
+### Boundaries:
+<br>
+
+ ---
+### Back-references:
+<br>
+
+ ---
+### Look-ahead and Look-behind:
+<br>
+
+ ---
+## Author:
 
 Robert Schwartz
+<br>
 Github Profile:  Github.com/Robert-Schwartz
+<br>
+2021
