@@ -75,15 +75,16 @@ Character Classes match a character from a specific set.  There are pre-defined 
 
 > Our Regex:  `^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$`
 
-- Anchors Used: `[a-z]`, `[0-9]`, `/d`, `/.`
+- Character Classes Used: `[a-z]`, `[0-9]`, `/d`, `/.`, `@`
     >* `[a-z]` looks for any characters within the range of lowercase a-z.
     >* `[0-9]` Looks for any characters within the range of 0 - 9.
      >* `/d` Matches any digit character (0-9). Equivalent to [0-9].
      >*  `/.`  Escape Character (period).  Escape sequences can be used to insert reserved, special, and unicode characters. All escaped characters begin with the `\` character.
+      >* `@` Matches any @ character
 
 <br> - Email Example: `validemail@gmail.com`
 
-This email contains characters allowed by the Character Classes `[a-z]`, `[0-9]`, `/d` and `/.`, Therefore remains valid
+All characters contained in the email example are allowed by the Character Classes `[a-z]`, `[0-9]`, `/d`, `/.`, and `@` Therefore remaining valid
 
  ---
 
